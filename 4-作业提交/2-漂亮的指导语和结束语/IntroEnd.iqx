@@ -1,0 +1,153 @@
+﻿//指导语
+<text instructiontxt1>
+	/hjustify = center
+    /vposition = 45 pct
+	/items = ("实验中屏幕会呈现一系列有颜色的汉字
+注意观察汉字的颜色
+----------------
+
+
+
+
+----------------
+请尽快做出反应")
+    /size = (1000,300)
+	/fontstyle = ("楷体", 24pt)
+	/txbgcolor = (transparent)            
+	/txcolor = (255,255,255)
+</text>
+
+<text instructiontxt2>
+	/hjustify = center
+    /vposition = 57 pct
+	/items = ("当颜色为红时按D键")
+    /size = (1000,300)
+	/fontstyle = ("楷体", 24pt)
+	/txbgcolor = (transparent)            
+	/txcolor = (255,0,0)
+</text>
+
+<text instructiontxt3>
+	/hjustify = center
+    /vposition = 62 pct
+	/items = ("当颜色为绿时按F键")
+    /size = (1000,300)
+	/fontstyle = ("楷体", 24pt)
+	/txbgcolor = (transparent)            
+	/txcolor = (0,255,0)
+</text>
+
+<text instructiontxt4>
+	/hjustify = center
+    /vposition = 67 pct
+	/items = ("当颜色为蓝时按J键")
+    /size = (1000,300)
+	/fontstyle = ("楷体", 24pt)
+	/txbgcolor = (transparent)            
+	/txcolor = (0,0,255)
+</text>
+
+<text instructiontxt5>
+	/hjustify = center
+    /vposition = 72 pct
+	/items = ("当颜色为黄时按L键")
+    /size = (1000,300)
+	/fontstyle = ("楷体", 24pt)
+	/txbgcolor = (transparent)            
+	/txcolor = (255,255,0)
+</text>
+
+<text anykeytxt1>
+	/items = ("按任意键开始实验")
+	/vposition = 70 pct
+	/fontstyle = ("楷体", 24pt)
+	/txcolor = (255,255,255)
+	/txbgcolor = (transparent)
+</text>
+
+<text endtxt>
+	/hjustify = center
+    /vposition = 50 pct
+	/items = ("                  实验结束！
+                  感谢您的参与！")
+	/size = (1000,300)
+	/fontstyle = ("楷体", 35pt)
+	/txbgcolor = (transparent)            
+	/txcolor = (255,255,255)
+</text>
+
+<text anykeytxt2>
+	/items = ("                  按任意键退出")
+	/vposition = 55 pct
+	/fontstyle = ("楷体", 35pt)
+	/txcolor = (255,255,255)
+	/txbgcolor = (transparent)
+</text>
+
+***************************************************************************
+<picture instructionpic1>
+     /items=("http://p1.so.qhmsg.com/bdr/_240_/t019a2f286752f6114b.jpg")
+     /position = (70,60)
+     /size = (400,400)
+     /valign = top
+     / halign = left
+ </picture>
+
+<picture instructionpic2>
+     /items=("http://p4.so.qhmsg.com/bdr/_240_/t01b3e1e4a2ba622b74.jpg")
+     /position = (0,65)
+     /size = (400,400)
+     /valign = top
+     / halign = left
+ </picture>
+
+<picture instructionpic3>
+     /items=("http://p4.so.qhmsg.com/bdr/_240_/t01f18fc7e2b2357509.jpg")
+     /position = (70,5)
+     /size = (400,400)
+     /valign = top
+     / halign = left
+ </picture>
+
+<picture instructionpic4>
+     /items=("http://p1.so.qhmsg.com/bdr/_240_/t014a3d08911138a286.jpg")
+     /position = (0,5)
+     /size = (400,400)
+     /valign = top
+     / halign = left
+ </picture>
+
+<picture endpic>
+     /items=("2.jpg")
+     /position = (0,0)
+     /size = (1866,860)
+     /valign = top
+     / halign = left
+ </picture>
+ 
+ ***********************************************************
+ <trial instruction>
+ 	/validresponse = (anyresponse)
+ 	/stimulusframes = [1=instructionpic1,instructionpic2,instructionpic3,instructionpic4,instructiontxt1,instructiontxt2,instructiontxt3,instructiontxt4,instructiontxt5,anykeytxt1]
+ 	/recorddata = false
+ </trial>
+ 
+ <trial end>
+ 	/validresponse = (anyresponse)
+ 	/stimulusframes = [1=endpic,endtxt,anykeytxt2]
+ 	/recorddata = false
+ </trial>
+ 
+ <block instruction>
+  	/screencolor = (0,0,0)
+ 	/trials = [1=instruction]
+ </block>
+ 
+ <block end>
+ 	/screencolor = (0,0,0)
+ 	/trials = [1=end]
+ </block>
+ 
+ <expt>
+ 	/ blocks = [1=instruction;2=end]
+ </expt>
